@@ -1,0 +1,33 @@
+mat-toolbar{
+    position: fixed; /* 上と左右の余白を詰める */
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    z-index: 2;
+}
+
+.toolbar-spacer {
+    flex: 1 1 auto; /* mat-toolbarの中央のスペース */
+}
+
+mat-icon {
+    font-family: 'Material Icons';
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+  }
+
+.mat-menu {
+    top: 0;
+    right: 10;
+}

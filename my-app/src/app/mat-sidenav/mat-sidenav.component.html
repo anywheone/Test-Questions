@@ -1,0 +1,15 @@
+<link rel="stylesheet" type="text/css" href="mat-sidenav.component.css">
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="over" class="side-menu" [opened]="isOpen">
+    <mat-nav-list>
+      <a mat-list-item [routerLink]="''"> 問題集作成 </a>
+      <a mat-list-item [routerLink]="''"> 問題集検索 </a>
+      <a mat-list-item [routerLink]="''"> リクエスト </a>
+      <a mat-list-item [routerLink]="'/mat-grid-list'"> 参考問題 </a>
+      <button (click)="sidenav.toggle()">aaa</button>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content></mat-sidenav-content>
+</mat-sidenav-container>
+

@@ -1,0 +1,10 @@
+mat-grid-list {
+    padding-top: 64px; /* mat-toolbarとの間に隙間 */
+    background-color: #ffffff;
+  }
+
+mat-grid-tile {
+    color: #000000;
+    background-color: rgb(201, 201, 237);
+}
+

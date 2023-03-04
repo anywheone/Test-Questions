@@ -1,0 +1,4 @@
+mat-card{
+    padding-top: 100px; /* mat-toolbarとの間に隙間 */
+    text-align: center;
+}
