@@ -8,6 +8,7 @@ import { MatSidenavComponent } from './mat-sidenav/mat-sidenav.component';
 import { MatGridListComponent } from './mat-grid-list/mat-grid-list.component';
 import { SignupComponent } from './signup-form/signup-form.component';
 import { LogoutComponent } from './logout-form/logout-form.component';
+import { CreateTestComponent } from './create-test/create-test/create-test.component';
 
 // このルーターの設定により、<router-outlet></router-outlet>を利用できる
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'mat-grid-list', component: MatGridListComponent },
   { path: 'signup-form', component: SignupComponent },
   { path: 'logout-form', component: LogoutComponent },
+  { path: 'create-test', component: CreateTestComponent },
 ];
 
 @NgModule({

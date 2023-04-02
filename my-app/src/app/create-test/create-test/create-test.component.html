@@ -1,0 +1,28 @@
+<header>問題集を作成してください。</header>
+<div>
+  <label>タイトル:</label>
+  <input type="text" id="title" [(ngModel)]="title" name="title" />
+</div>
+
+<create-test-item
+  *ngFor="let child of children"
+  [questionModel]="child"
+></create-test-item>
+
+<button
+  mat-raised-button
+  color="primary"
+  class="plusbutton"
+  (click)="addQuestion()"
+>
+  +
+</button>
+
+<button
+  mat-raised-button
+  color="primary"
+  class="createbutton"
+  (click)="submitQuestions()"
+>
+  問題集作成を完了する
+</button>

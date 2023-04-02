@@ -1,0 +1,48 @@
+<form>
+  <div>
+    <label for="question">問題:</label>
+    <input
+      type="text"
+      id="question"
+      [(ngModel)]="questionModel.question"
+      name="question"
+    />
+  </div>
+  <br />
+  <div>
+    <label for="choice1">選択肢①:</label>
+    <input
+      type="text"
+      id="choice1"
+      [(ngModel)]="questionModel.choice1"
+      name="choice1"
+    />
+  </div>
+  <div>
+    <label for="choice2">選択肢②:</label>
+    <input
+      type="text"
+      id="choice2"
+      [(ngModel)]="questionModel.choice2"
+      name="choice2"
+    />
+  </div>
+  <div>
+    <label for="choice3">選択肢③:</label>
+    <input
+      type="text"
+      id="choice3"
+      [(ngModel)]="questionModel.choice3"
+      name="choice3"
+    />
+  </div>
+  <div>
+    <label for="answer">答え:</label>
+    <select id="answer" [(ngModel)]="questionModel.answer" name="answer">
+      <option value="1">選択肢①</option>
+      <option value="2">選択肢②</option>
+      <option value="3">選択肢③</option>
+    </select>
+  </div>
+  <!-- <button (click)="submitQuestionsModel()">test</button> -->
+</form>

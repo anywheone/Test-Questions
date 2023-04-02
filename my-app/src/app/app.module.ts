@@ -25,9 +25,15 @@ import { MatSidenavComponent } from './mat-sidenav/mat-sidenav.component';
 import { MatGridListComponent } from './mat-grid-list/mat-grid-list.component';
 import { SignupComponent } from './signup-form/signup-form.component';
 import { LogoutComponent } from './logout-form/logout-form.component';
+import { CreateTestComponent } from './create-test/create-test/create-test.component';
+import { CreateTestItemComponent } from './create-test/create-test-item/create-test-item.component';
 
 // my-service
 import { MatSidenavService } from './mat-sidenav.service';
+import { StoreModule } from '@ngrx/store';
+import { reducers, metaReducers } from './reducers';
+
+
 
 @NgModule({
   declarations: [
@@ -39,6 +45,8 @@ import { MatSidenavService } from './mat-sidenav.service';
     MatGridListComponent,
     SignupComponent,
     LogoutComponent,
+    CreateTestComponent,
+    CreateTestItemComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,6 +64,10 @@ import { MatSidenavService } from './mat-sidenav.service';
     MatSidenavModule,
     MatToolbarModule,
     MatListModule,
+    StoreModule.forRoot({}, {}),
+    StoreModule.forRoot(reducers, {
+      metaReducers
+    }),
   ],
   providers: [MatSidenavService],
   bootstrap: [AppComponent]
