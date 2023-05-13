@@ -6,16 +6,18 @@ import { MatSidenav } from '@angular/material/sidenav';
 @Component({
   selector: 'app-mat-toolbar',
   templateUrl: './mat-toolbar.component.html',
-  styleUrls: ['./mat-toolbar.component.css']
+  styleUrls: ['./mat-toolbar.component.css'],
 })
-export class MatToolbarComponent{
-  
+export class MatToolbarComponent {
   // implements OnInit
   // @ViewChild('sidenav') public sidenav!: MatSidenav;
 
   // Angularが当コンポーネントに必要なサービスや依存関係をコンストラクターのパラメータで判断する
   // インスタンスがまだ存在しない場合、app.module.tsのProviderを利用しインジェクターにインスタンスを追加
-  constructor(private router: Router, private _sidenavService: MatSidenavService) {
+  constructor(
+    private router: Router,
+    private _sidenavService: MatSidenavService
+  ) {
     // this._sidenavService.matSidenavToggle();
   }
 
@@ -50,5 +52,10 @@ export class MatToolbarComponent{
   onLogOutClick() {
     console.log('LogOut clicked!');
     this.router.navigate(['/logout-form']);
+  }
+
+  onMyPageClick() {
+    console.log('MyPage clicked!');
+    this.router.navigate(['/mypage']);
   }
 }

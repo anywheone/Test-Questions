@@ -1,0 +1,8 @@
+div{
+    padding-top: 20px; /* titleとの間に隙間 */
+    text-align: center;
+}
+
+#question {
+    width: 800px;
+}
