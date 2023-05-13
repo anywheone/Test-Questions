@@ -4,19 +4,19 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup-form.component.html',
-  styleUrls: ['./signup-form.component.css']
+  styleUrls: ['./signup-form.component.css'],
 })
-export class SignupComponent {
+export class SignupFormComponent {
   SignupForm!: FormGroup;
-  passwordVisible: string = "visibility";
+  passwordVisible: string = 'visibility';
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit(): void {
     this.SignupForm = this.formBuilder.group({
       username: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]]
+      password: ['', [Validators.required, Validators.minLength(6)]],
     });
   }
 
@@ -25,11 +25,10 @@ export class SignupComponent {
   }
 
   togglePasswordVisibility(): void {
-    if(this.passwordVisible == "visibility"){
-      this.passwordVisible = "visibility_off";
-    }
-    else{
-      this.passwordVisible = "visibility";
+    if (this.passwordVisible == 'visibility') {
+      this.passwordVisible = 'visibility_off';
+    } else {
+      this.passwordVisible = 'visibility';
     }
   }
 }
